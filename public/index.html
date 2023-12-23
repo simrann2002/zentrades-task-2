@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Import Products</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Import Products</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <div class="form-step">
+            <label for="fileUpload">Select File</label>
+            <input type="file" id="fileUpload" name="productFile" accept=".json,.csv" required>
+            <span>Supported File Types: .csv, .json</span>
+        </div>
+        
+        <div class="form-step">
+            <label>Specify Format</label>
+            <select name="fileType" id="fileType">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+            <select name="charset" id="charset">
+                <option value="UTF-8">UTF-8</option>
+                <option value="ISO-8859-1">ISO-8859-1</option>
+            </select>
+            <input type="text" name="delimiter" id="delimiter" value="," placeholder="Delimiter">
+            <label for="hasHeader">
+                <input type="checkbox" name="hasHeader" id="hasHeader">
+                Has Header
+            </label>
+        </div>
+        
+        <div class="form-step">
+            <label>Display Handling</label>
+            <div class="fields-selection">
+                <div>
+                    <label>Available Fields</label>
+                    <select multiple id="availableFields">
+                        <option value="productId">Product Id</option>
+                        <option value="subcategory">Subcategory</option>
+                        <option value="title">Title</option>
+                        <option value="price">Price</option>
+                        <option value="popularity">Popularity</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <button type="button" id="addField" >>></button>
+                    <button type="button" id="removeField"><<</button>
+                </div>
+                <div>
+                    <label>Fields to be Displayed</label>
+                    <select multiple id="displayedFields">
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-step">
+            <button type="submit">Next</button>
+            <button type="button" onclick="window.location.reload()">Cancel</button>
+        </div>
+    </form>
+    
+    <div id="productsTable">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

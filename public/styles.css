@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%; 
+    max-width: 900px; 
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-step {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.form-step label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-step div {
+    margin-bottom: 10px;
+}
+
+.format-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.format-options select,
+.format-options input,
+.format-options label {
+    flex-basis: calc(33.333% - 10px);
+    margin-right: 10px;
+}
+
+.format-options select:last-child,
+.format-options input:last-child,
+.format-options label:last-child {
+    margin-right: 0;
+}
+
+.fields-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.fields-selection select {
+    width: 58%;
+    height: 120px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.fields-selection button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Button hover effect */
+.fields-selection button:hover {
+    background-color: #4cae4c;
+}
+
+/* Bottom Buttons */
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button.cancel {
+    background-color: #d9534f;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button.cancel:hover {
+    background-color: #c9302c;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden; 
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th {
+    height: 40px;
+    background-color: #f8f8f8;
+}
+
+td {
+    padding: 10px;
+    height: 40px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .format-options {
+        flex-direction: column;
+    }
+
+    .format-options select,
+    .format-options input,
+    .format-options label {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+
+    .fields-selection {
+        flex-direction: column;
+    }
+
+    .fields-selection select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .fields-selection button {
+        width: auto;
+        padding: 10px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
